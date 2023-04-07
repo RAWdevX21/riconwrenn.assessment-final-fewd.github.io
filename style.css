@@ -1,0 +1,114 @@
+:root {
+  --background-primary-color: lavender;
+  --header-bg-color: skyblue;
+  --font-family: monospace;
+  --background-image: url("/images/ghibli-logo.png");
+}
+/* GLOBAL STYLES */
+body {
+  margin: 0;
+  background: var(--background-primary-color);
+  font-family: var(--font-family);
+}
+header {
+  background: var(--header-bg-color);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 75%;
+  height: 125px;
+}
+h1 {
+  margin: 0;
+  inline-size: 350px;
+}
+
+main {
+  margin: 0 auto;
+  width: 75%;
+}
+main select {
+  min-width: 185px;
+}
+/* Form Components */
+/* #review-form { */
+/* display: flex; */
+/* align-items: center; */
+/* } */
+fieldset {
+  border: none;
+  padding: 0;
+}
+/* #submit-button { */
+/* padding: 5px; */
+/* font-size: 10px; */
+
+/* border-radius: 4px; */
+/* cursor: pointer; */
+/* } */
+
+/* .sidebar { */
+/* grid-area: sidebar; */
+/* } */
+
+/* .content { */
+/* grid-area: content; */
+/* position: relative; */
+/* top: 12em; */
+/* right: 25%; */
+/* bottom: -12px; */
+/* left: -25%; */
+/* height: 14em; */
+/* width: 46em; */
+/* } */
+
+/* .header { */
+/* grid-area: header; */
+/* } */
+
+/* .footer { */
+/* grid-area: footer; */
+/* } */
+
+/* .wrapper { */
+/* display: grid; */
+/* grid-gap: 15px; */
+/* grid-template-columns: 1fr 2fr auto; */
+/* grid-template-areas: */
+/* "header  header  header" */
+/* "sidebar content content" */
+/* "footer  footer  footer"; */
+/* color: #444; */
+/* } */
+
+/* .box { */
+/* color: #080707; */
+/* border-radius: 5px; */
+/* padding: 50px; */
+/* top: 8em; */
+/* right: auto; */
+/* bottom: -12px; */
+/* left: 13em; */
+/* height: 16em; */
+/* width: 46em; */
+/* } */
+
+/* .sidebar { */
+/* position: fixed; */
+/* width: 250px; */
+/* height: 14em; */
+/* inset: 15% auto 100px 0; */
+/* top: auto; */
+/* right: auto; */
+/* left: 15em; */
+/* bottom: auto; */
+/* } */
+/* .footer { */
+/* position: fixed; */
+/* width: 100%; */
+/* height: 100px; */
+/* top: auto; */
+/* right: 0; */
+/* bottom: 0; */
+/* left: 0; */
+/* } */

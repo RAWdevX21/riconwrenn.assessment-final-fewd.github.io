@@ -1,0 +1,55 @@
+[{ id, title, description }, ...data] = data;
+
+const getData = function () {
+  const fData = fetch("./films-response.json")
+    .then((response) => response.json())
+    .then((data) => console.log("This is fData: " + data));
+
+  const pData = fetch("./people-response.json")
+    .then((response) => response.json())
+    .then((data) => console.log("This is pData: " + data));
+  return [fData, pData];
+};
+console.log("getData()");
+
+const supplyData = (data) => {
+  const selectList = data.reduce((acc, movie) => {
+    const selectMenu = document.getElementById("titles");
+    selectMenu.appendChild(
+      document
+        .createElement("option")
+        .setAttribute("value", id)
+        .insertAdjacentText("afterbegin", title)
+    );
+  }, "");
+};
+
+let userReviews = [];
+//     .catch((error) => {
+//       console.log(data);
+//       console.error(error);
+//     }),
+
+//     userValues: {
+//       selectedTitle: document.querySelector("select"),
+//       userReview: document.querySelector("#review"),
+//       movieDetails: {},
+//     },
+// };
+
+document.addEventListener("DOMContentLoaded", () => {
+  getData();
+  console.log("getData()");
+  document.getElementById("user").addEventListener("click", (ev) => {
+    ev.preventDefault();
+  });
+});
+//     // Clear the form  List Elements
+//     form.reset();
+//   });
+// });
+// document
+//   .querySelector("#search-form")
+//   .addEventListener("submit", function (event) {
+//     event.preventDefault();
+//     weather.search();
