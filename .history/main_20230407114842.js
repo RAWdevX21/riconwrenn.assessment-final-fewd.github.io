@@ -5,13 +5,15 @@ const fieldset = document.querySelector("fieldset");
 const submitBtn = document.querySelector(`input[type="submit"]`);
 const pplBtn = document.getElementById("show-people");
 const resetBtn = document.getElementById("reset-reviews");
-const constraintA = [reviewForm, fieldset, pplBtn];
-const constraintB = [submitBtn, resetBtn];
-const userInput = document.querySelector(`input[type="text"]`);
+
 const app = {
+  constraintA: [reviewForm, fieldset, pplBtn],
+  constraintB: [submitBtn, resetBtn],
+  userInput: document.querySelector(`input[type="text"]`),
+
   /*   🔔 EventHandlers
   ╚═════════════════════════════╝*/
-  onFormSub: userInput.addEventListener("compositionstart", (e) => {
+  onFormSub: this.userInput.addEventListener("compositionstart", (e) => {
     !userInput.value
       ? console.log(e)
       : constraintB.forEach((el) => (el.disabled = !el.disabled));
